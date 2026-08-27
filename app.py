@@ -75,11 +75,13 @@ S = st.sidebar.slider(
     step=0.5
 )
 
+S = float(S)
+
 K = st.sidebar.slider(
     "Strike Price ($)",
-    min_value=stock_data['strike'] * 0.8,
-    max_value=stock_data['strike'] * 1.2,
-    value=stock_data['strike'],
+    min_value=float(S * 0.80),
+    max_value=float(S * 1.20),
+    value=float(S),
     step=0.5
 )
 
