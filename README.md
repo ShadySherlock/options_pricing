@@ -218,17 +218,6 @@ Errors occur due to:
 - Check risk-free rate (5% = 0.05)
 - Confirm time to expiry calculation
 
-## Contributing
-
-Contributions welcome! Areas to expand:
-
-- [ ] Put options & spreads
-- [ ] American option approximations
-- [ ] Implied volatility solver
-- [ ] Greeks heatmaps
-- [ ] Historical volatility download
-- [ ] Real-time option data via yfinance
-- [ ] Portfolio Greeks aggregation
 
 ## Future Enhancements
 
@@ -242,8 +231,4 @@ Contributions welcome! Areas to expand:
 
 **Live Demo**: [https://optionspricing-qn5yv4fdk7o4xhkwinevfc.streamlit.app/]
 
-**GitHub**: [Your Repo Link]
 
-**LinkedIn**: [Your Profile]
-
-⭐ If you find this useful, please star the repository!
