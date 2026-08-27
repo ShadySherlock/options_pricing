@@ -238,25 +238,9 @@ Contributions welcome! Areas to expand:
 - **Risk Management**: VaR, CVaR calculations
 - **Backtesting**: Test models across historical data
 
-## License
 
-MIT License - See LICENSE file for details
 
-## Author
-
-Created as a **quantitative finance portfolio project** demonstrating:
-- Advanced options pricing mathematics
-- Monte Carlo simulation techniques
-- Full-stack web application development
-- Real data analysis & visualization
-
-## Contact
-
-For questions or suggestions, open an issue or reach out on LinkedIn.
-
----
-
-**Live Demo**: [Streamlit Cloud Link]
+**Live Demo**: [https://optionspricing-qn5yv4fdk7o4xhkwinevfc.streamlit.app/]
 
 **GitHub**: [Your Repo Link]
 
