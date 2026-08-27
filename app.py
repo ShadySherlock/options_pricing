@@ -213,13 +213,21 @@ with col_chart1:
         marker_color='rgba(52, 152, 219, 0.7)',
         opacity=0.7
     ))
-    fig1.add_vline(S_T_actual, line_dash="dash", line_color="red", 
-                   annotation_text=f"Actual Spot: ${S_T_actual:.2f}",
-                   annotation_position="top right")
-    fig1.add_vline(K, line_dash="dash", line_color="orange",
-                   annotation_text=f"Strike: ${K:.2f}",
-                   annotation_position="top left")
-    
+   fig1.add_vline(
+    x=float(S_T_actual),
+    line_dash="dash",
+    line_color="red",
+    annotation_text=f"Actual Spot: ${float(S_T_actual):.2f}",
+    annotation_position="top right"
+)
+
+fig1.add_vline(
+    x=float(K),
+    line_dash="dash",
+    line_color="orange",
+    annotation_text=f"Strike: ${float(K):.2f}",
+    annotation_position="top left"
+)
     fig1.update_layout(
         title="Monte Carlo: Distribution of Simulated Final Prices",
         xaxis_title="Final Spot Price ($)",
@@ -304,8 +312,12 @@ fig3.add_trace(go.Scatter(
     line=dict(color=CHART_COLORS['intrinsic'], width=3, dash='dash')
 ))
 
-fig3.add_vline(S, line_dash=":", line_color="gray", 
-               annotation_text=f"Current Spot: ${S:.2f}")
+fig3.add_vline(
+    x=float(S),
+    line_dash="dot",
+    line_color="gray",
+    annotation_text=f"Current Spot: ${float(S):.2f}"
+)
 
 fig3.update_layout(
     title="Call Option Price Sensitivity Across Spot Prices (6-month maturity)",
@@ -345,12 +357,19 @@ with col_conv1:
         line=dict(color=CHART_COLORS['monte_carlo'], width=3),
         marker=dict(size=8)
     ))
-    
-    fig4.add_hline(bs_price, line_dash="dash", line_color=CHART_COLORS['black_scholes'],
-                   annotation_text=f"BS Theoretical: ${bs_price:.2f}")
-    
-    fig4.add_hline(intrinsic_value, line_dash="dash", line_color=CHART_COLORS['intrinsic'],
-                   annotation_text=f"Actual Payoff: ${intrinsic_value:.2f}")
+    fig4.add_hline(
+    y=float(bs_price),
+    line_dash="dash",
+    line_color=CHART_COLORS['black_scholes'],
+    annotation_text=f"BS Theoretical: ${float(bs_price):.2f}"
+)
+
+fig4.add_hline(
+    y=float(intrinsic_value),
+    line_dash="dash",
+    line_color=CHART_COLORS['intrinsic'],
+    annotation_text=f"Actual Payoff: ${float(intrinsic_value):.2f}"
+)
     
     fig4.update_xaxes(type="log")
     fig4.update_layout(
@@ -425,10 +444,19 @@ fig6.add_trace(go.Scatter(
 ))
 
 # Add strike and actual
-fig6.add_hline(K, line_dash="dash", line_color=CHART_COLORS['actual'],
-               annotation_text=f"Strike: ${K:.2f}")
-fig6.add_hline(S_T_actual, line_dash="dash", line_color="green",
-               annotation_text=f"Actual Spot: ${S_T_actual:.2f}")
+fig6.add_hline(
+    y=float(K),
+    line_dash="dash",
+    line_color=CHART_COLORS['actual'],
+    annotation_text=f"Strike: ${float(K):.2f}"
+)
+
+fig6.add_hline(
+    y=float(S_T_actual),
+    line_dash="dash",
+    line_color="green",
+    annotation_text=f"Actual Spot: ${float(S_T_actual):.2f}"
+)
 
 fig6.update_layout(
     title=f"{MC_PATH_COUNT} Sample Monte Carlo Paths (Geometric Brownian Motion)",
